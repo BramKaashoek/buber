@@ -8,15 +8,14 @@ class Passenger
     @buber = buber
     @pick_up_distance = pick_up_distance
     @drop_off_distance = drop_off_distance
-
-    puts "Passenger #{age} created."
-
-    taxi = buber.get_first_free_taxi(age)
-    taxi.pick_up(age, pick_up_distance)
-    taxi.drop_off(age, pick_up_distance, drop_off_distance)
-
   end
 
+  def go_on_trip
+    puts "Passenger #{@age} created."
+    taxi = @buber.get_first_free_taxi(@age)
+    taxi.pick_up(@age, @pick_up_distance)
+    taxi.drop_off(@age, @pick_up_distance, @drop_off_distance)
 
+  end
 
 end

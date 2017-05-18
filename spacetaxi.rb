@@ -28,7 +28,6 @@ class SpaceTaxi
     @available = true
   end
 
-
   def drive_to(distance)
     while distance > 0
       distance -=1
